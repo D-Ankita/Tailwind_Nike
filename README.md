@@ -10,12 +10,13 @@ This is a sample landing page for Nike created using Tailwind CSS, a highly cust
 - [Installation](#installation)
 - [Usage](#usage)
 - [Customization](#customization)
+- [Deployment](#deploying-your-vite-project-on-vercel)
 - [Contributing](#contributing)
 - [Credits](#credits)
 
 ## Demo
 
-Check out the live demo of the Nike Landing Page [here](https://tailwind-nike-gray.vercel.app/).
+Check out the live demo of the Nike Landing Page [here](https://tailwind-nike-clone.vercel.app/).
 
 ## Features
 
@@ -60,6 +61,35 @@ The landing page is built using Tailwind CSS, which makes customization straight
 - **Content**: Update the HTML content in the corresponding files within the `src` directory.
 - **Images**: Replace the images in the `src/assets` directory with your own images.
 - **Layout**: Adjust the layout and structure by modifying the HTML files in the `src` directory.
+
+## Deploying Your Vite Project on Vercel
+
+### Log in to Vercel
+
+If you don't have a Vercel account, sign up for one. Then, log in to your Vercel account.
+
+### Deploy via Vercel UI
+
+1. Visit [vercel.com](https://vercel.com/) and log in.
+2. On your Vercel dashboard, click the "New Project" button.
+3. Choose to Import your Project from Github
+4. Vercel will automatically detect the framework used (Vite).
+5. Configure project settings:
+   - Set a project name.
+   - verify if the detected framework is correct
+   - choose your root directory (default is ./)
+6. Configure Build and Output Settings
+    - Since we have used Tailwind we need to generate the output file so we will have to override the "Build command" to  `npx tailwindcss -i ./src/index.css -o ./dist/output.css && vite build`
+    - rest all the commands remain the same
+6. Configure deployment settings
+   - Choose your desired domain (or use the auto-generated Vercel domain).
+6. Click the "Deploy" button.
+
+### Access Your Deployed Site
+
+Once the deployment is complete, Vercel will provide you with a URL where your website is live. You can access your deployed site through this URL.
+
+That's it! Your Vite project is now deployed and live on the internet.
 
 ## Contributing
 
